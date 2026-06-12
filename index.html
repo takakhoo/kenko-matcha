@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KENKO · Matcha + Greens Energy</title>
+<meta name="description" content="KENKO ceremonial matcha + greens energy: 60 mg natural caffeine, calm focus, no crash. Spirulina, chlorella and moringa in every scoop.">
+<style>
+:root{
+  --deep:#21441a; --mid:#33621f; --leaf:#4a7c2f; --bright:#6FA84C;
+  --coral:#F2785C; --peach:#F4D2B0; --cream:#F2EAD0; --ink:#1c2a16; --ink2:#46523f;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:#F7F3E6;line-height:1.55;}
+a{color:var(--leaf);text-decoration:none;}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px;}
+
+header{position:sticky;top:0;z-index:50;background:rgba(33,68,26,.96);backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(242,234,208,.3);}
+nav{display:flex;align-items:center;gap:26px;height:60px;}
+.nav-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:600;letter-spacing:6px;font-size:16px;}
+.nav-brand svg{width:30px;height:30px;}
+nav .links{margin-left:auto;display:flex;gap:22px;}
+nav .links a{color:var(--peach);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;}
+nav .links a:hover{color:#fff;}
+
+.hero{position:relative;color:var(--cream);text-align:center;padding:76px 22px 88px;overflow:hidden;
+  background:radial-gradient(110% 80% at 50% 0%,rgba(242,234,208,.16),transparent 55%),
+             linear-gradient(165deg,#4a7c2f 0%,#33621f 55%,#21441a 100%);}
+.hero .jp{font-size:15px;letter-spacing:10px;color:var(--peach);}
+.hero h1{font-size:clamp(46px,7vw,78px);font-weight:600;letter-spacing:14px;margin:10px 0 6px;text-transform:uppercase;}
+.hero .descriptor{font-size:clamp(13px,2vw,18px);letter-spacing:5px;font-weight:600;text-transform:uppercase;color:#E5F0CF;}
+.hero .enso{width:120px;height:120px;margin:0 auto 8px;}
+.hero p.sub{max-width:540px;margin:18px auto 0;font-size:16px;color:#DDE8C2;font-style:italic;}
+.hero .cta{display:inline-block;margin-top:28px;border:2px solid var(--coral);border-radius:40px;
+  padding:12px 34px;color:#fff;font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase;}
+.hero .cta:hover{background:var(--coral);}
+
+.statband{background:var(--deep);color:var(--peach);}
+.statband .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;padding:16px 22px;
+  font-size:12.5px;letter-spacing:2px;font-weight:700;text-transform:uppercase;}
+
+section{padding:64px 0;}
+h2{font-size:30px;color:var(--deep);letter-spacing:1px;text-transform:uppercase;text-align:center;}
+.rule{width:74px;height:3px;background:var(--coral);margin:14px auto 40px;border-radius:2px;}
+
+.ritual{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
+.step{background:#fff;border:1px solid rgba(33,68,26,.12);border-radius:14px;padding:26px 22px;
+  box-shadow:0 2px 10px rgba(33,68,26,.07);}
+.step .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--coral);color:#fff;
+  align-items:center;justify-content:center;font-weight:800;margin-bottom:12px;}
+.step h3{font-size:16px;color:var(--deep);margin-bottom:6px;}
+.step p{font-size:14px;color:var(--ink2);}
+
+.pouch{background:var(--deep);color:var(--cream);text-align:center;}
+.pouch h2{color:#fff;}
+.pcard{max-width:430px;margin:0 auto;border:1.5px solid var(--peach);border-radius:16px;padding:34px 28px;background:rgba(0,0,0,.16);}
+.pcard .tag{display:inline-block;font-size:11px;letter-spacing:2px;font-weight:700;color:var(--deep);
+  background:var(--peach);border-radius:20px;padding:4px 14px;text-transform:uppercase;}
+.pcard h3{font-size:24px;margin:16px 0 4px;letter-spacing:2px;}
+.pcard .nw{font-size:16px;color:var(--coral);font-weight:800;margin-bottom:10px;}
+.pcard p{font-size:14px;color:#DDE8C2;}
+
+.facts-sec .cols{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:start;}
+@media(max-width:760px){.facts-sec .cols{grid-template-columns:1fr;}}
+.facts-sec h2{text-align:left;}
+.facts-sec .rule{margin-left:0;}
+table.sft{width:100%;border:2px solid #000;border-collapse:collapse;background:#fff;font-size:13.5px;}
+table.sft th{font-size:20px;text-align:left;padding:8px 10px 2px;border-bottom:8px solid #000;}
+table.sft td{padding:4px 10px;border-top:1px solid #000;}
+table.sft td:last-child{text-align:right;font-weight:700;white-space:nowrap;}
+table.sft tr.hd td{border-top:none;font-size:11.5px;font-weight:700;text-align:right;}
+table.sft tr.blend td{font-weight:700;border-top:3px solid #000;}
+.fine{font-size:12px;color:var(--ink2);margin-top:10px;}
+.inglist{font-size:13.5px;color:var(--ink2);}
+.inglist b{color:var(--deep);}
+.howcard{background:var(--mid);color:var(--cream);border-radius:14px;padding:24px;margin-top:22px;}
+.howcard h4{color:var(--peach);letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:8px;}
+.badgerow{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+.badge{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--deep);
+  border:1.5px solid var(--coral);border-radius:20px;padding:5px 13px;background:#fff;}
+
+footer{background:var(--deep);color:#cfdcbb;padding:42px 0 50px;font-size:12.5px;}
+footer .wrap{display:grid;gap:14px;}
+footer .brandline{color:var(--peach);font-weight:700;letter-spacing:5px;font-size:14px;}
+footer .disc{font-style:italic;max-width:760px;}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <span class="nav-brand">
+    <svg viewBox="0 0 120 120"><path d="M86 24 A47 47 0 1 0 99 66" fill="none" stroke="#F2EAD0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M60 40 C41 55 41 83 60 97 C79 83 79 55 60 40 Z" fill="#F2785C"/></svg>
+    KENKO</span>
+  <span class="links">
+    <a href="#ritual">Ritual</a><a href="#pouch">The Pouch</a><a href="#facts">What's Inside</a>
+  </span>
+</nav></div></header>
+
+<div class="hero">
+  <div class="jp">抹茶 · けんこう</div>
+  <svg class="enso" viewBox="0 0 120 120">
+    <path d="M86 24 A47 47 0 1 0 99 66" fill="none" stroke="#F2EAD0" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M60 40 C41 55 41 83 60 97 C79 83 79 55 60 40 Z" fill="#F2785C"/>
+    <path d="M60 47 L60 93" stroke="#2f5d2a" stroke-width="2.4"/>
+    <path d="M60 60 L50 54 M60 60 L70 54 M60 73 L49 67 M60 73 L71 67 M60 85 L52 80 M60 85 L68 80" stroke="#2f5d2a" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <h1>Kenko</h1>
+  <div class="descriptor">Ceremonial Matcha + Greens Energy</div>
+  <p class="sub">Calm, clean energy from ceremonial-grade matcha, balanced with spirulina, chlorella and moringa. 60 mg natural caffeine. No crash.</p>
+  <a class="cta" href="#pouch">See the pouch</a>
+</div>
+
+<div class="statband"><div class="wrap">
+  <span>60 mg Natural Caffeine</span><span>Ceremonial Grade</span><span>L-Theanine + Caffeine</span><span>Vegan</span><span>No Crash</span>
+</div></div>
+
+<section id="ritual"><div class="wrap">
+  <h2>The Ritual</h2><div class="rule"></div>
+  <div class="ritual">
+    <div class="step"><span class="n">1</span><h3>Scoop</h3><p>One scoop (6 g) of vibrant, stone-ground matcha and greens.</p></div>
+    <div class="step"><span class="n">2</span><h3>Whisk</h3><p>Whisk or shake into 8-10 oz cold water, milk or a latte.</p></div>
+    <div class="step"><span class="n">3</span><h3>Flow</h3><p>Smooth focus from L-theanine and caffeine, working together.*</p></div>
+  </div>
+</div></section>
+
+<section class="pouch" id="pouch"><div class="wrap">
+  <h2>One Big Pouch</h2><div class="rule"></div>
+  <div class="pcard">
+    <span class="tag">Value Size</span>
+    <h3>Stand-Up Pouch</h3>
+    <div class="nw">NET WT 26.4 OZ (750 g) · 125 servings</div>
+    <p>Four months of daily matcha in one resealable, light-blocking foil pouch. Whisk it, shake it, latte it.</p>
+  </div>
+</div></section>
+
+<section class="facts-sec" id="facts"><div class="wrap"><div class="cols">
+  <div>
+    <h2>What's Inside</h2><div class="rule"></div>
+    <p class="inglist"><b>Organic Matcha &amp; Green Tea Blend:</b> Ceremonial Matcha, Green Tea Leaf, Moringa Leaf.<br><br>
+    <b>Greens &amp; Antioxidant Blend:</b> Spirulina, Chlorella (cracked cell wall), Wheatgrass, Lemon Balm.<br><br>
+    <b>Also:</b> Organic Coconut Water Powder, Monk Fruit Extract. No major allergens.</p>
+    <div class="howcard"><h4>How to use</h4>
+      Whisk or shake 1 scoop (6 g) into 8-10 oz cold water, milk or a latte once daily. Vibrant, smooth and naturally sweet.</div>
+    <div class="badgerow">
+      <span class="badge">Vegan</span><span class="badge">Antioxidant-Rich</span><span class="badge">Calm Focus</span>
+      <span class="badge">No Added Sugar</span><span class="badge">Non-GMO</span>
+    </div>
+  </div>
+  <div>
+    <table class="sft">
+      <tr><th colspan="2">Supplement Facts</th></tr>
+      <tr class="hd"><td style="text-align:left">Serving Size 1 Scoop (6 g)</td><td>Amount Per Serving</td></tr>
+      <tr><td><b>Calories</b></td><td>20</td></tr>
+      <tr><td><b>Total Carbohydrate</b> 3 g</td><td>1%*</td></tr>
+      <tr><td style="padding-left:24px">Dietary Fiber 1 g</td><td>4%*</td></tr>
+      <tr><td style="padding-left:24px">Total Sugars 0 g</td><td></td></tr>
+      <tr><td><b>Protein</b> 1 g</td><td></td></tr>
+      <tr><td>Vitamin A 90 mcg RAE</td><td>10%</td></tr>
+      <tr><td>Vitamin C 18 mg</td><td>20%</td></tr>
+      <tr><td>Iron 1.8 mg</td><td>10%</td></tr>
+      <tr><td><b>Caffeine</b> 60 mg</td><td>†</td></tr>
+      <tr class="blend"><td>Organic Matcha &amp; Green Tea Blend</td><td>3,500 mg†</td></tr>
+      <tr class="blend"><td>Greens &amp; Antioxidant Blend</td><td>2,000 mg†</td></tr>
+    </table>
+    <p class="fine">*Percent Daily Values are based on a 2,000 calorie diet. †Daily Value not established.</p>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <div class="brandline">KENKO TEA CO. · BERKELEY, CALIFORNIA</div>
+  <div class="disc">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Contains naturally occurring caffeine (60 mg per serving). Not recommended for children or those sensitive to caffeine.</div>
+  <div>© 2026 Kenko Tea Co. Stone-ground, small-batch, Berkeley, CA.</div>
+</div></footer>
+
+</body>
+</html>
